@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import Weather from './Weather';
 import './App.css';
 
 function App() {
@@ -6,8 +7,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <Weather />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> and save npm reload.
         </p>
         <a
           className="App-link"
