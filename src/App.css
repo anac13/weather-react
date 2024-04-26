@@ -1,3 +1,6 @@
+.App{
+  text-align: center;
+}
 .Weather {
   margin: 30px auto;
   border: 1px solid #00ff95;
