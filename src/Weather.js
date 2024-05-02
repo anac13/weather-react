@@ -34,7 +34,9 @@ export default function Weather() {
           />
         </div>
         <div className="col-1">
-          <button type="Submit" className="btn btn-primary">Search</button>
+          <button type="Submit" className="btn btn-primary">
+            Search
+          </button>
         </div>
       </div>
     </form>
@@ -58,21 +60,25 @@ export default function Weather() {
         {form}
         <h1>{weather.name}</h1>
         <ul>
-          <li>Temperature: {Math.round(weather.temperature)}</li>
+          <li>Saturday 15:00</li>
           <li>Description: {weather.description}</li>
-          <li>Wind: {weather.wind}</li>
-          <li>Humidity: {weather.humidity}</li>
-          <li>
-            <img src={weather.icon} alt={weather.description}/>
-          </li>
         </ul>
+        <div className="row">
+          <div className="col-6">
+            <img src={weather.icon} alt={weather.description} />
+            {Math.round(weather.temperature)}
+          </div>
+          
+          <div className="col-6">
+            <ul>
+              <li>Wind: {weather.wind}</li>
+              <li>Humidity: {weather.humidity}</li>
+            </ul>
+          </div>
+        </div>
       </div>
     );
-     
-     
   } else {
-    return <div className="Weather">
-      {form}
-    </div>;
+    return <div className="Weather">{form}</div>;
   }
 }

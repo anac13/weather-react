@@ -1,13 +1,13 @@
-.App{
+.App p {
   text-align: center;
 }
+
 .Weather {
   margin: 30px auto;
   border: 1px solid #00ff95;
   border-radius: 5px;
   padding: 10px;
   width: 800px;
-  text-align: center;
   background: #00ff95;
 }
 
@@ -15,4 +15,3 @@
   list-style: none;
   padding: 0;
 }
-
