@@ -1,17 +1,10 @@
-.App p {
-  text-align: center;
-}
-
-.Weather {
+.App {
+  max-width: 600px;
   margin: 30px auto;
-  border: 1px solid #00ff95;
-  border-radius: 5px;
-  padding: 10px;
-  width: 800px;
-  background: #00ff95;
+  
 }
 
-.Weather ul {
-  list-style: none;
-  padding: 0;
+.App footer{
+    font-size: 11px;
+    margin: 10px 0;
 }

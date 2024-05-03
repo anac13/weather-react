@@ -7,17 +7,19 @@ function App() {
     <div className="App">
       <div className="container">
         <Weather />
-        <p>
-          Coded by Ana Cañete and is
-          <a
-            href="https://github.com/anac13/weather-react"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {" "}
-            open-sourced on GitHub
-          </a>
-        </p>
+        <footer>
+          
+            Coded by Ana Cañete and is
+            <a
+              href="https://github.com/anac13/weather-react"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              open-sourced on GitHub
+            </a>
+          
+        </footer>
       </div>
     </div>
   );
