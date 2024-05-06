@@ -47,3 +47,7 @@
   top: -34px;
   margin-left: 2px;
 }
+
+.Weather .unit a{
+  text-decoration: none;
+}
