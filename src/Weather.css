@@ -1,9 +1,9 @@
 .Weather {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  border: 1px solid #00ff95;
+  border: 1px solid #0D6EFD;
   border-radius: 5px;
   padding: 16px;
-  background: hsl(155, 100%, 50%);
+  background: hsl(0, 0%, 97%);
 }
 
 .Weather h1{
@@ -26,10 +26,9 @@
   list-style: none;
 }
 
-.Weather img{
-  height: 64px;
-  width: 64px;
+.Weather canvas{
   float: left;
+  margin-top: 5px;
   margin-left: 10px;
 }
 
@@ -46,5 +45,4 @@
   line-height: 1;
   position: relative;
   top: -34px;
-  margin-left: 5px;
 }
