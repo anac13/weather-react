@@ -1,35 +1,42 @@
-import React from "react";
-import WeatherIcon from "./WeatherIcon";
+import React, { useState } from "react";
+
 import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeatherForecast.css";
 
 export default function WeatherForecast(props) {
+  const [forecast, setForecast] = useState(null);
+  const [loaded, setLoaded] = useState(false);
   function handleResponse(response) {
-    console.log(response.data);
+    setLoaded(true);
+    setForecast(response.data.daily);
   }
 
-  let apiKey = "3a94f3778290bfeee61278505dbbe51d";
-   let units = "metric";
-  let longitude = props.coordinates.lon;
-  let latitude = props.coordinates.lat;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(handleResponse);
-
-
- return (
-  <div className="WeatherForecast">
-    <div className="row mt-3">
-      <div className="col">
-        <div className="WeatherForecast-day">Thu</div>
-
-        <WeatherIcon code="01d" size={36} />
-
-        <div className="WeatherForecast-temperaures">
-          <span className="WeatherForecast-temperature-max">19°</span>
-          <span className="WeatherForecast-temperature-min">10°</span>
+  if (loaded) {
+    return (
+      <div className="WeatherForecast">
+        <div className="row mt-3">
+          {forecast.map(function (dailyForecast, index) {
+            if (index > 0 && index < 7) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay data={dailyForecast} />
+                </div>
+              ); 
+            }
+           
+          })}
         </div>
       </div>
-    </div>
-  </div>
-);
+    );
+  } else {
+    let apiKey = "1dbf926d3b4417bf379db7043bec1047";
+    let units = "metric";
+    let longitude = props.coordinates.lon;
+    let latitude = props.coordinates.lat;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+
+    axios.get(apiUrl).then(handleResponse);
+    return null;
+  }
 }
