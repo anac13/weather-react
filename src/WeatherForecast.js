@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeatherForecast.css";
-import userEvent from "@testing-library/user-event";
 
 export default function WeatherForecast(props) {
   const [forecast, setForecast] = useState(null);
@@ -39,9 +38,10 @@ export default function WeatherForecast(props) {
                   <WeatherForecastDay data={dailyForecast} />
                 </div>
               );
-            }else{
+            } else {
               return null;
             }
+            
           })}
         </div>
       </div>
