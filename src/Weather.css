@@ -1,46 +1,65 @@
 .Weather {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  border: 1px solid #0D6EFD;
+  font-family: "Cinzel", serif;
   border-radius: 5px;
+  color: black;
   padding: 16px;
-  background: hsl(0, 0%, 97%);
+  background: transparent;
+  backdrop-filter: blur(5px);
 }
 
-.Weather h1{
-  color: grey;
-  margin: 20px 0 0 0;
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 29px;
+.Weather .weatherInfo {
+  border-radius: 10px;
 }
 
-.Weather ul{
-  margin: 0;
-  padding: 0;
+.Weather .forecastInfo {
+  border-radius: 10px;
 }
 
-.Weather li {
-  font-size: 16px;
-  font-weight: 100;
+.Weather h1 {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  font-size: 18px;
+  font-weight: 700;
   line-height: 19px;
-  list-style: none;
 }
 
-.Weather canvas{
+.Weather .title-city {
+  font-family: "Cinzel", serif;
+  text-shadow: 0 0 10px rgb(0, 5, 14), 0 0 40px rgb(2, 5, 10);
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.Weather .WeatherInfo p {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.Weather canvas {
   display: inline-block;
   margin-top: 5px;
 }
 
-.Weather .temperature{
+.Weather .temperature {
   font-weight: bold;
-  font-size: 64px;
-  font-weight: 400;
+  font-size: 54px;
+  font-weight: 900;
   line-height: 64px;
-  margin-left: 5px;
 }
 
-.Weather .unit{
-  font-size: 16px;
+.Weather .temperature-data .icon-data {
+  padding: 0;
+}
+
+.Weather .temperature-data {
+  margin-left: -50px;
+}
+
+.Weather .unit {
+  font-size: 10px;
   font-weight: 400;
   line-height: 1;
   position: relative;
@@ -48,6 +67,38 @@
   margin-left: 2px;
 }
 
-.Weather .unit a{
+.Weather .unit a {
   text-decoration: none;
+  background: black;
+  font-weight: 300;
+  padding: 5px;
+  border-radius: 50%;
+  color: white;
+}
+
+.Weather ul {
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+}
+
+.Weather li {
+  display: inline;
+  margin: 0 8px;
+  font-weight: 600;
+}
+
+.Weather .form-input {
+  padding: 10px;
+  border: 3px solid #8fb4fd;
+  background: transparent;
+  box-shadow: 1px 1px 20px 1px #8fb4fd;
+}
+
+.Weather .btn-button {
+  background: transparent;
+  color: black;
+  border: 3px solid #8fb4fd;
+  box-shadow: 1px 1px 20px 1px #8fb4fd;
+  padding: 10px 22px;
 }

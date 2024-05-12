@@ -15,18 +15,20 @@ export default function WeatherIcon(props) {
     "09n": "RAIN",
     "10d": "RAIN",
     "10n": "RAIN",
-    "11d": "CLEAR_NIGHT",
-    "11n": "CLEAR_NIGHT",
+    "11d": "RAIN",
+    "11n": "RAIN",
     "13d": "SNOW",
     "13n": "SNOW",
     "50d": "FOG",
     "50n": "FOG",
   };
+
+
   
   return (
     <ReactAnimatedWeather
       icon={codeMapping[props.code]}
-      color="#0B5ED7"
+      color={props.color}
       size={props.size}
       animate={true}
     />

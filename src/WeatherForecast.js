@@ -18,7 +18,7 @@ export default function WeatherForecast(props) {
   }
 
   function load() {
-    let apiKey = "1dbf926d3b4417bf379db7043bec1047";
+    let apiKey = "8ca7dd4e61360b90fb66918853670e48";
     let units = "metric";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
@@ -30,19 +30,23 @@ export default function WeatherForecast(props) {
   if (loaded) {
     return (
       <div className="WeatherForecast">
-        <div className="row mt-3">
-          {forecast.map(function (dailyForecast, index) {
-            if (index > 0 && index < 7) {
-              return (
-                <div className="col" key={index}>
-                  <WeatherForecastDay data={dailyForecast} />
-                </div>
-              );
-            } else {
-              return null;
-            }
-            
-          })}
+        <div className="row m-1">
+         
+            {forecast.map(function (dailyForecast, index) {
+              if (index > 0 && index < 7) {
+                return (
+                  <div className=" col-4 forecast" key={index}>
+                    <WeatherForecastDay
+                      data={dailyForecast}
+                      iconColor={props.iconColor}
+                    />
+                  </div>
+                );
+              } else {
+                return null;
+              }
+            })}
+       
         </div>
       </div>
     );

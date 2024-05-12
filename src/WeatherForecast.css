@@ -2,7 +2,19 @@
     text-align: center;
 }
 
+.WeatherForecast p{
+    font-size: 12px;
+    margin: 0;
+    font-weight: 600;
+}
+
+
+.WeatherForecast .forecast{
+    padding: 2px;
+}
+
 .WeatherForecast .WeatherForecast-temperature-min{
     opacity: 0.6;
     margin-left: 5px;
 }
+
