@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactLoading from "react-loading";
 import axios from "axios";
 import WeatherBackground from "./WeatherBackground";
 import "./Weather.css";
@@ -64,6 +65,8 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "loading";
+    return (
+      <ReactLoading type="bubbles" color="#8fb4fd" height={500} width={500} />
+    );
   }
 }
